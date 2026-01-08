@@ -40,9 +40,9 @@ export default function AdminDashboard() {
         const years = cert.ciclo_escolar.split('-');
         if (years.length === 2) {
             const prefix = `QR${years[0].slice(-2)}${years[1].slice(-2)}`;
-            return `https://normales-seph-gob-mx.vercel.app/${prefix}/index.php?key=${cert.key}`;
+            return `${window.location.origin}/${prefix}/index.php?key=${cert.key}`;
         }
-        return `https://normales-seph-gob-mx.vercel.app/QR2324/index.php?key=${cert.key}`; // Fallback
+        return `${window.location.origin}/QR2324/index.php?key=${cert.key}`; // Fallback
     };
 
     const copyLink = (cert: Certificate) => {
