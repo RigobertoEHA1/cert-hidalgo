@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function Home() {
-  redirect("https://normales.seph.gob.mx/");
+  redirect("http://normales.seph.gob.mx/");
 }
