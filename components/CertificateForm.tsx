@@ -28,7 +28,7 @@ export default function CertificateForm({ initialData }: Props) {
 
     useEffect(() => {
         if (initialData) {
-            setFormData(prev => ({ ...prev, ...initialData }));
+            setFormData((prev: any) => ({ ...prev, ...initialData }));
         }
     }, [initialData]);
 
@@ -39,7 +39,7 @@ export default function CertificateForm({ initialData }: Props) {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setFormData(prev => {
+        setFormData((prev: any) => {
             const newData = { ...prev, [name]: value };
 
             // Auto-generate key when Folio Digital changes
